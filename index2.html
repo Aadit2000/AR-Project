@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Table Model</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- AR Scene -->
+  <a-scene embedded arjs>
+    <!-- Marker-less AR Plane -->
+    <a-marker-camera preset='hiro'></a-marker-camera>
+
+    <!-- Add Lighting -->
+    <a-light type="directional" position="1 1 1"></a-light>
+    <a-light type="ambient" color="#888"></a-light>
+
+    <!-- 3D Model -->
+    <a-entity 
+      gltf-model="./5_12_2024.glb" 
+      position="0 0 0" 
+      rotation="0 180 0" 
+      scale="0.1 0.1 0.1">
+    </a-entity>
+  </a-scene>
+</body>
+</html>
